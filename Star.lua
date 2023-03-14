@@ -5,6 +5,3 @@
 @17kxcmzz,
 @RFbilinmeyen,
 @RFbilinmeyen_yedek,
-
-
-@Deya9812,
