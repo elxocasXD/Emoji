@@ -1,8 +1,13 @@
+Heartbeat = game:GetService("RunService").Heartbeat:Connect(function()   
 
 STAR = {
     [2273612104] = true;
     [2201428839] = true;
     [2254233493] = true;
+}
+
+STARV2 = {
+	[326547341] = true;
 }
 
 ADMINS = {
@@ -23,6 +28,8 @@ function initiateNames()
                 v.Character:FindFirstChildWhichIsA('Humanoid').DisplayName = ('[🔨] ' .. v.DisplayName)
             elseif STAR[v.UserId] then
                 v.Character:FindFirstChildWhichIsA('Humanoid').DisplayName = ('[🌟] ' .. v.DisplayName)
+            elseif STARV2[v.UserId] then
+                v.Character:FindFirstChildWhichIsA('Humanoid').DisplayName = ('[✨] ' .. v.DisplayName)				
             elseif not v.Character.LowerTorso:FindFirstChild('OriginalSize') then
                 v.Character:FindFirstChildWhichIsA('Humanoid').DisplayName = ('[👤] ' .. v.DisplayName)
             end
@@ -30,6 +37,6 @@ function initiateNames()
     end
 end
 
-Heartbeat = game:GetService("RunService").Heartbeat:Connect(function()   
+
 local successful, errored = pcall(initiateNames)
 end)
