@@ -39,4 +39,5 @@ end
 
 
 local successful, errored = pcall(initiateNames)
+return STAR, STARV2, ADMINS, OWNER
 end)
